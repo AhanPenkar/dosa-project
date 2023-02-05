@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="./resources/ol.css">
+        <link rel="stylesheet" href="resources/fontawesome-all.min.css">
+        <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
+        <link rel="stylesheet" href="./resources/qgis2web.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dosa Batter Madness</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<style>
+/* Container for the listicle */
+.listicle {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Style for each item in the listicle */
+.listicle-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Style for odd items in the listicle */
+.listicle-item:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+/* Style for even items in the listicle */
+.listicle-item:nth-child(even) {
+  flex-direction: row;
+}
+
+/* Style for the image in each item */
+.listicle-item img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+/* Style for the text in each item */
+.listicle-item-text {
+  flex: 1;
+}
+
+/* Style for the title in each item */
+.listicle-item-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Style for the description in each item */
+.listicle-item-desc {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+
+.search-layer {
+  top: 65px;
+  left: .5em;
+}
+.ol-touch .search-layer {
+  top: 80px;
+}
+​
+.container {
+    /* Remove the line below if you want a wider page */
+    max-width: 700px !important;
+    font-family: Palatino;
+}
+</style>
+        <style>
+        html, body {
+            background-color: #ffffff;
+        }
+        .ol-control button {
+            background-color: #f8f8f8 !important;
+            color: #000000 !important;
+            border-radius: 0px !important;
+        }
+​
+        .ol-scale-line {
+            background: none !important;
+        }
+        .ol-scale-line-inner {
+            border: 2px solid #f8f8f8 !important;
+            border-top: none !important;
+            background: rgba(255, 255, 255, 0.5) !important;
+            color: black !important;
+        }
+        </style>
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+​
+      <section class="hero is-medium">
+    <div class="hero-body">
+      <div class="container">
+        <img src="./images/cover_image.png" alt="Cover Image">
+        <h1 class="title">
+          What makes a good dosa batter?
+        </h1>
+        <p class="subtitle">
+          Analysing different kinds of dosa batter for versatility and taste.
+        </p>
+      
+​
+      <div class="content">
+        <p><i>Ahan Joshua Penkar | 02/02/2023 | <a href="LINK TO YOUR GITHUB"><u>Github</u></a></i></p>
+        <p>Getting a good dosa in NYC is the equivalent of being ripped off. And it isin’t even that good. I could not have survived my undergraduate degree without my dosa and keema curry.  In New York, getting a Dosa is a ridiculously expensive affair. I refuse to pay more that $12 for something I could get for much cheaper back home. However, what I am willing to do is buy dosa batter, which is made from a soaked rice and lentils that have been grounded down into a nice paste. For an outsider, it’s difficult going into a store and picking up you’re an ideal kind of batter, so I’ve tried to make an explainer. </p>
+​        <iframe title="Rice increases fluffiness, but reduces heterogenous flavor " aria-label="Stacked Bars" id="datawrapper-chart-W2o1v" src="https://datawrapper.dwcdn.net/W2o1v/4/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="284" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
+        <p>There are two fundamental components to every kind of batter: Rice and Lentils (which I will call Dal from this point) and their ratio is what makes the base of a lot of South Indian carbs. After they’re ground, the rice and dal start to ferment, and this allows for interesting textures when you make dosa or idli. Fermentation causes 2 things:</p>
+        <p>It makes your food sour</p>
+        <p>It makes your food fluffy</p>
+        <p>My grandmother’s batter is the best kind of batter that you can get, but since we don’t have access to that, we’ll just have to settle for ID’s dosa mix. Id’s mix has the closest percentage to the ideal ratio, which allows for 5 versatile breakfasts. Another variant is the Idli mix which allows for ridiculously soft idlis, but that’s a terrible idea for versatility. Always look at the ingredients and think about what you prefer, while specialized batters are great they are never versatile. </p>
+        <iframe title="Idly Mixes cheat by adding more rice" aria-label="Stacked Bars" id="datawrapper-chart-Cc8Tr" src="https://datawrapper.dwcdn.net/Cc8Tr/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="299" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+        </script>
+    
+      </div>
+      <div class="listicle">
+        <ul>
+          <li class="listicle-item">
+            <img src="image1.jpg" alt="Dosa Picture">
+            <div class="listicle-item-text">
+              <h3 class="listicle-item-title">Day One: Dosa</h3>
+              <p class="listicle-item-desc">You will need: A griddle, some patience
+                The batter is least fermented now, making it perfect for Dosa. Think of dosa as akin to pancakes, but way better, because there’s no sugar. You can put toppings like potatoes, although minced lamb is my favorite. Have it with some chutney too.
+                </p>
+            </div>
+          </li>
+          <li class="listicle-item">
+            <img src="./images/appam_final.png" alt="Image of Appam">
+            <div class="listicle-item-text">
+              <h3 class="listicle-item-title">Day Two: Appam</h3>
+              <p class="listicle-item-desc">You will need: An Appam Griddle We’re still in pancake territory here, but an extra day of fermentation allows the batter to have a hint of sourness. Appams are pancakes too but have a nice soft center that goes really well with stew or a chutney. Making this is no joke, I’ve only ever managed it once, and that was a disaster. </p>
+            </div>
+          </li>
+          <li class="listicle-item">
+            <img src="./images/idli_final.png" alt="Image of Idli">
+            <div class="listicle-item-text">
+              <h3 class="listicle-item-title">Day Four: Idli</h3>
+              <p class="listicle-item-desc">You will need: A steamer, an idli mould.
+                Idlis are soft through and through, like I said earlier, it’s best to have a higher amount of rice, but we’re sacrificing that for a more diverse week of breakfasts. However, you can add plenty of fillings to an idli, or even throw in a bunch of spices. Idlis are soft and comforting.</p>
+            </div>
+          </li>
+          <li class="listicle-item">
+            <img src="./images/panniyaram_final.png" alt="Image of Panniyaram">
+            <div class="listicle-item-text">
+              <h3 class="listicle-item-title">Day Five: Panniyaram</h3>
+              <p class="listicle-item-desc">You will need: A Panniyaram mould.
+                Panniyaram is my least favourite, so we’re going to use leftovers for this one. Panniyaram is crispy on the outside and is probably the most interesting texturally. Panniyaram is ideal for the last day because you really need the batter to do some heavy lifting in terms of flavor. It’s sour at this point, but not too much. </p>
+            </div>
+          </li>
+          <!-- Add more items here -->
+        </ul>
+      </div>
+  </section>    
+    </body>
+</html>
